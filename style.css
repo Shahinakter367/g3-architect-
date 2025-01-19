@@ -111,7 +111,7 @@ main > section{
 }
 .team-img-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  
+    grid-template-columns: repeat(2,1fr) ;  
     gap: 24px;  
 }
 
@@ -129,7 +129,7 @@ main > section{
 
 .fact-container{
     display: grid;
-    grid-template-columns: repeat(4 , 1fr);
+    grid-template-columns: repeat(4 , 1fr) ;
 }
 .icon-fact{
     border: 1px solid #FF900E;
@@ -139,6 +139,7 @@ main > section{
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 
 
 }
@@ -157,9 +158,24 @@ main > section{
 }
 .fact-description{
     max-width: 540px;
+    margin-top: 10px;
 }
 
+/* sponsore related style */
+.sponsore-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
 
+.sponsore-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsore-companies img{
+    filter: grayscale(100%);
+}
 
 
 /* Media query responsive */
@@ -172,8 +188,22 @@ main > section{
         flex-direction: column;
     }
 
-    .team-img-container{
-        grid-template-columns: repeat(1, 1fr);
+    .team-img-container, 
+    .fact-container,
+    .sponsore-companies
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .fact-container{
+        justify-content: center;
+        gap: 24px;
+
+    }
+
+    .sponsore-companies{
+        justify-content: center;
+        gap: 50px;
     }
     .our-features{
         margin-left: 20px;
@@ -188,6 +218,11 @@ main > section{
         }
         .our-features{
             margin: 50px auto;
+        }
+        .sponsore-companies, .fact-container{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            justify-items: center;
         }
    
 
